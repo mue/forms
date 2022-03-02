@@ -7,10 +7,5 @@
             "source": "/:form",
             "destination": "/api/index?form=:form"
         }
-    ],
-    "functions": {
-        "api/index.js": {
-            "includeFiles": "views/**"
-        }
-    }
+    ]
 }
