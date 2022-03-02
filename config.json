@@ -1,0 +1,8 @@
+{
+    "ratelimit": {
+        "max": 6,
+        "time": 3600
+    },
+    "emails": ["hello@muetab.com"],
+    "redirect": "https://muetab.com/formsuccess"
+}
