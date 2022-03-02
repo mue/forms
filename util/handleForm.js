@@ -7,6 +7,7 @@ const hcaptcha = require('hcaptcha');
 const UAParser = require('ua-parser-js');
 const ejs = require('ejs');
 const strip = require('striptags');
+const fs = require('fs');
 
 const umami = require('./umami');
 const config = require('../config.json');
@@ -97,7 +98,7 @@ module.exports = async (req, res) => {
           from: 'Mue Uninstall Form <hello@muetab.com>',
           to: config.emails,
           subject: 'New uninstall response',
-          html: await ejs.renderFile('./views/email.ejs', {
+          html: ejs.render(fs.readFileSync('../views/email.ejs', 'utf8'), {
             content: `
             <p>Reason: ${reasons[strip(fields.reason)]}</p>
             ${fields.reasonOther ? `<p>Reason (Other): ${strip(fields.reasonOther)}</p>` : ''}
@@ -115,7 +116,7 @@ module.exports = async (req, res) => {
           from: 'Mue Contact Form <hello@muetab.com>',
           to: config.emails,
           subject: 'New contact response',
-          html: await ejs.renderFile('./views/email.ejs', {
+          html: ejs.render(fs.readFileSync('../views/email.ejs', 'utf8'), {
             content: `
             <p>Email Address: ${strip(fields.Email)}</p>
             <p>"${strip(fields.MultiLine)}"</p>
