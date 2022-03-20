@@ -1,14 +1,24 @@
 {
+    "name": "mue-forms",
+    "private": true,
+    "description": "Forms backend for the Mue website",
+    "repository": {
+        "url": "github:mue/forms"
+    },
+    "homepage": "https://forms.muetab.com",
+    "author": "The Mue Authors (https://github.com/mue/api/graphs/contributors)",
+    "license": "MIT",
+    "version": "1.0.0",
     "dependencies": {
-        "ejs": "^3.1.6",
-        "form-data": "^4.0.0",
-        "formidable-serverless": "^1.1.1",
-        "hcaptcha": "^0.1.1",
-        "isbot": "^3.4.3",
-        "lambda-rate-limiter": "^3.0.1",
-        "mailgun.js": "^5.0.1",
-        "node-fetch": "^2.6.7",
-        "striptags": "^3.2.0",
-        "ua-parser-js": "^1.0.2"
+        "ejs": "3.1.6",
+        "form-data": "4.0.0",
+        "formidable-serverless": "1.1.1",
+        "hcaptcha": "0.1.1",
+        "isbot": "3.4.5",
+        "lambda-rate-limiter": "3.0.1",
+        "mailgun.js": "5.0.2",
+        "node-fetch": "2.6.7",
+        "striptags": "3.2.0",
+        "ua-parser-js": "1.0.2"
     }
 }

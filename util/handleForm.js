@@ -129,13 +129,11 @@ module.exports = async (req, res) => {
     }
 
     mg.messages.create(process.env.MAILGUN_DOMAIN, data)
-      .then(async (response) => {
-        console.log(response);
+      .then(async () => {
         await umami.request('/', req);
         return res.redirect(303, config.redirect);
       })
-      .catch(async (err) => {
-        console.log(err);
+      .catch(async () => {
         await umami.error('/', req, 'email-failed');
         return res.redirect(303, config.redirect);
       });

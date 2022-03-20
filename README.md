@@ -20,4 +20,4 @@ Forms backend for the Mue website
 ## License
 Form Code - [MIT](LICENSE)
 
-Email Template [MIT](util/EMAIL-LICENSE) (By Wildbit & Canvas)
+Email Template - [MIT](util/EMAIL-LICENSE) (By Wildbit & Canvas)
